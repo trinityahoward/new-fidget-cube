@@ -19,22 +19,17 @@ basic.forever(function () {
         "B01000010,B11100111,B11111111,B11111111,B11111111,B01111110,B00111100,B00011000"
         )
     } else if (pins.digitalReadPin(DigitalPin.P1) == 0) {
-        max7219_matrix.scrollText(
-        "UR NEXT",
-        75,
-        500
-        )
-        max7219_matrix.clearAll()
+        basic.showString("UR NEXT")
     } else if (pins.digitalReadPin(DigitalPin.P5) == 0) {
         strip.showRainbow(1, 360)
         strip.show()
         basic.pause(5000)
-        max7219_matrix.clearAll()
+        basic.clearScreen()
     } else if (pins.digitalReadPin(DigitalPin.P11) == 0) {
         screen = max7219_matrix.getCustomCharacterArray(
         "B01111110,B11111111,B10011001,B10011001,B11111111,B00111100,B00111100,B00111100"
         )
     } else {
-        max7219_matrix.clearAll()
+        basic.clearScreen()
     }
 })

@@ -1,5 +1,5 @@
 {
-    "name": "new fidget cube",
+    "name": "fidget cube",
     "description": "",
     "dependencies": {
         "core": "*",
